@@ -1,0 +1,40 @@
+<section id="perfil" class="hero" aria-labelledby="hero-title">
+  <div class="container hero-content">
+    <div class="intro">
+      <div class="identity">
+        <h1 id="hero-title" class="name">David Bellón Payer</h1>
+        <p class="profile">{{ 'hero.profile' | translate }}</p>
+        <p class="location">{{ 'hero.location' | translate }}</p>
+      </div>
+      <img
+        class="photo"
+        src="images/perro.png.jpg"
+        [alt]="'hero.imageAlt' | translate"
+        width="1000"
+        height="1500"
+      />
+    </div>
+
+    <div class="biography">
+      <div class="presentation">
+        <p>{{ 'hero.introduction' | translate }}</p>
+        <p>{{ 'hero.experience' | translate }}</p>
+        <p>{{ 'hero.learning' | translate }}</p>
+      </div>
+
+      <div class="actions">
+        <a class="action download" [href]="cvUrl()" download>
+          {{ 'hero.downloadCv' | translate }}
+        </a>
+        <a
+          class="action github"
+          href="https://github.com/DDDBBBPPP"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{ 'hero.github' | translate }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

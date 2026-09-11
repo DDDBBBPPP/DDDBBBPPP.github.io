@@ -22,10 +22,12 @@ describe('App', () => {
     expect(app).toBeTruthy();
   });
 
-  it('should render the header brand', async () => {
+  it('should render the name only in the hero as the single h1', async () => {
     const fixture = TestBed.createComponent(App);
     await fixture.whenStable();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('app-header .brand')?.textContent).toContain('David Bellón');
+    expect(compiled.querySelectorAll('h1')).toHaveLength(1);
+    expect(compiled.querySelector('app-hero h1')?.textContent).toBe('David Bellón Payer');
+    expect(compiled.querySelector('app-header')?.textContent).not.toContain('David Bellón');
   });
 });

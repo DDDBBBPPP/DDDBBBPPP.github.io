@@ -36,11 +36,17 @@ Despliegue previsto: GitHub Pages mediante GitHub Actions.
 
 - Una página principal dividida en componentes especializados.
 - Navegación: Perfil, Trayectoria, Proyectos y Stack.
-- Marca visible: David Bellón.
+- Navbar sin marca, texto de identidad ni logo; nombre solo en el hero como único h1.
+- En escritorio, navegación a la izquierda y controles de idioma y tema a la derecha.
 - Cabecera no sticky.
-- Hero con texto a la izquierda y fotografía a la derecha en escritorio.
+- Hero en un único bloque de lectura centrado, de aproximadamente 50rem:
+  bloque de identidad (David Bellón Payer, Desarrollador web / Web Developer y
+  Málaga, España / Málaga, Spain) a la izquierda y fotografía cuadrada a la derecha,
+  centrada verticalmente respecto al bloque completo en todos los tamaños.
+  Foto de aproximadamente 144–160 px en escritorio y 88–96 px en móvil.
+  Debajo, biografía y acciones; botones centrados en móvil.
 - En móvil, una columna y menú lateral desde la izquierda, con la
-  hamburguesa a la izquierda.
+  hamburguesa a la izquierda y controles de idioma y tema a la derecha.
 - Selector ES/EN visible también en móvil.
 - Tema claro beige y crema, con texto marrón oscuro.
 - Tema oscuro marrón tierra, sin negro puro.

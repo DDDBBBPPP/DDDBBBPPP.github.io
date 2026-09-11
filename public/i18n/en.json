@@ -1,6 +1,15 @@
 {
+  "hero": {
+    "profile": "Web Developer",
+    "location": "Málaga, Spain",
+    "introduction": "Get to know me and explore the projects that are shaping my journey in web development.",
+    "experience": "I have worked on real-world projects with Angular, TypeScript and PHP, collaborating with a multidisciplinary team. This experience has helped me grow as a developer and understand how solutions are built in a professional environment.",
+    "learning": "I have C1-level English and have lived and worked in Dublin. I am continuing to develop my skills with Ionic and am currently taking a specialist programme in Artificial Intelligence and Big Data in Málaga.",
+    "downloadCv": "Download CV",
+    "github": "GitHub",
+    "imageAlt": "Placeholder image of a dog"
+  },
   "header": {
-    "homeLabel": "David Bellón Payer, home",
     "navLabel": "Main navigation",
     "profile": "Profile",
     "trajectory": "Experience & education",

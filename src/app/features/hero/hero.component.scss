@@ -1,0 +1,122 @@
+:host {
+  display: block;
+}
+
+.hero {
+  padding-block: clamp(1.75rem, 3vw, 2.75rem);
+
+  .hero-content {
+    max-width: 50rem;
+  }
+
+  .intro {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.625rem, 2vw, 1.25rem);
+  }
+
+  .biography {
+    margin-top: 1.25rem;
+  }
+
+  .identity {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .name {
+    min-width: 0;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.045em;
+  }
+
+  .profile {
+    margin: 0.875rem 0 0;
+    color: var(--color-accent);
+    font-size: clamp(1.0625rem, 1.6vw, 1.25rem);
+    font-weight: 600;
+  }
+
+  .location {
+    margin: 0.5rem 0 0;
+    color: var(--color-text-muted);
+    font-size: 0.9375rem;
+  }
+
+  .presentation {
+    max-width: 68ch;
+    margin-bottom: 1.25rem;
+    line-height: 1.65;
+
+    p {
+      margin: 0;
+    }
+
+    p + p {
+      margin-top: 1rem;
+    }
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    color: var(--color-text);
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      text-underline-offset: 0.25em;
+    }
+  }
+
+  .download {
+    border-color: var(--color-accent);
+    background: var(--color-accent);
+    color: var(--color-background);
+  }
+
+  .github {
+    &:hover {
+      background: var(--color-surface-alt);
+    }
+  }
+
+  .photo {
+    flex-shrink: 0;
+    width: clamp(5.5rem, 18.75vw, 10rem);
+    max-width: 10rem;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1rem;
+  }
+}
+
+@media (max-width: 35rem) {
+  .hero {
+    .photo {
+      width: clamp(5.5rem, 24vw, 6rem);
+    }
+
+    .actions {
+      justify-content: center;
+    }
+  }
+}
