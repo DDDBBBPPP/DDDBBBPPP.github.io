@@ -1,1 +1,65 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  color-scheme: light;
+  --color-background: #f5efe6;
+  --color-surface: #fffaf2;
+  --color-surface-alt: #eae0d2;
+  --color-text: #352820;
+  --color-text-muted: #6b5546;
+  --color-accent: #a34830;
+  --color-border: #b4a08c;
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+  --color-background: #261e19;
+  --color-surface: #322720;
+  --color-surface-alt: #403229;
+  --color-text: #f5eadb;
+  --color-text-muted: #cdb9a5;
+  --color-accent: #e49a78;
+  --color-border: #8e7561;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+  line-height: 1.5;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 75rem;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 3vw, 2rem);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+}

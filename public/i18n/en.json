@@ -1,0 +1,16 @@
+{
+  "header": {
+    "homeLabel": "David Bellón Payer, home",
+    "navLabel": "Main navigation",
+    "profile": "Profile",
+    "trajectory": "Experience & education",
+    "projects": "Projects",
+    "stack": "Stack",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "menuTitle": "Navigation",
+    "switchLanguage": "Cambiar a español",
+    "enableDarkTheme": "Enable dark theme",
+    "enableLightTheme": "Enable light theme"
+  }
+}
