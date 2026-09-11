@@ -1,0 +1,17 @@
+<article class="trajectory-card">
+  <div class="card-heading">
+    <div>
+      <p class="organization">{{ experience().company }}</p>
+      <h3>{{ experience().titleKey | translate }}</h3>
+    </div>
+    <p class="period">{{ experience().periodKey | translate }}</p>
+  </div>
+  <div class="stages">
+    @for (stage of experience().stages; track stage.titleKey) {
+      <div class="stage">
+        <h4>{{ stage.titleKey | translate }}</h4>
+        <p class="description">{{ stage.descriptionKey | translate }}</p>
+      </div>
+    }
+  </div>
+</article>

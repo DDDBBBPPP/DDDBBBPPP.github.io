@@ -9,6 +9,32 @@
     "github": "GitHub",
     "imageAlt": "Placeholder image of a dog"
   },
+  "trajectory": {
+    "title": "Experience & education",
+    "experience": {
+      "heading": "Experience",
+      "silice": {
+        "title": "Progression towards frontend development",
+        "period": "March 2025 - June 2026",
+        "conversational": {
+          "title": "Conversational flows and digital solutions",
+          "description": "Configured and reviewed multichannel assistants in PAU, including widgets and flows for WhatsApp and web."
+        },
+        "frontend": {
+          "title": "Frontend development and technical work",
+          "description": "Developed and maintained solutions with Angular and TypeScript, REST API integration, and resolution of frontend and backend issues."
+        }
+      }
+    },
+    "education": {
+      "heading": "Education",
+      "daw": {
+        "title": "Web Application Development - Higher Vocational Training",
+        "period": "September 2024 - June 2026",
+        "description": "Vocational training focused on developing, maintaining and deploying web applications."
+      }
+    }
+  },
   "header": {
     "navLabel": "Main navigation",
     "profile": "Profile",

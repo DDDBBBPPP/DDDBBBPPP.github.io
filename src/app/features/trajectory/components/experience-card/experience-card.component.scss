@@ -1,0 +1,72 @@
+:host {
+  display: block;
+}
+
+.trajectory-card {
+  padding: clamp(1rem, 2vw, 1.35rem);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background: var(--color-surface);
+  box-shadow: 0 0.5rem 1.5rem rgb(53 40 32 / 6%);
+}
+
+.card-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.organization,
+.period {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+h3 {
+  margin: 0.25rem 0 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.15rem, 1.5vw, 1.35rem);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.period {
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.stages {
+  margin: 0.9rem 0 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.stage {
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border);
+}
+
+h4 {
+  margin: 0;
+  color: var(--color-accent);
+  font-size: 0.9375rem;
+  font-weight: 700;
+}
+
+.description {
+  margin: 0.3rem 0 0;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 30rem) {
+  .card-heading {
+    display: block;
+  }
+
+  .period {
+    margin-top: 0.5rem;
+    text-align: left;
+  }
+}

@@ -1,5 +1,6 @@
 :root {
   color-scheme: light;
+  --content-max-width: 72rem;
   --color-background: #f5efe6;
   --color-surface: #fffaf2;
   --color-surface-alt: #eae0d2;
@@ -7,6 +8,11 @@
   --color-text-muted: #6b5546;
   --color-accent: #a34830;
   --color-border: #b4a08c;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
 }
 
 [data-theme='dark'] {
@@ -48,9 +54,15 @@ textarea {
 
 .container {
   width: 100%;
-  max-width: 75rem;
+  max-width: var(--content-max-width);
   margin-inline: auto;
   padding-inline: clamp(1rem, 3vw, 2rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 img {

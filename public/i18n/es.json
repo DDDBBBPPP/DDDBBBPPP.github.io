@@ -9,6 +9,32 @@
     "github": "GitHub",
     "imageAlt": "Imagen provisional de un perro"
   },
+  "trajectory": {
+    "title": "Trayectoria",
+    "experience": {
+      "heading": "Experiencia",
+      "silice": {
+        "title": "Evolución hacia el desarrollo frontend",
+        "period": "Marzo 2025 - junio 2026",
+        "conversational": {
+          "title": "Flujos conversacionales y soluciones digitales",
+          "description": "Configuración y revisión de asistentes multicanal en PAU, con widgets y flujos para WhatsApp y web."
+        },
+        "frontend": {
+          "title": "Desarrollo frontend y trabajo técnico",
+          "description": "Desarrollo y mantenimiento con Angular y TypeScript, integración con APIs REST y resolución de incidencias entre frontend y backend."
+        }
+      }
+    },
+    "education": {
+      "heading": "Formación",
+      "daw": {
+        "title": "Desarrollo de Aplicaciones Web - Grado Superior",
+        "period": "Septiembre 2024 - junio 2026",
+        "description": "Formación profesional orientada al desarrollo, mantenimiento y despliegue de aplicaciones web."
+      }
+    }
+  },
   "header": {
     "navLabel": "Navegación principal",
     "profile": "Perfil",

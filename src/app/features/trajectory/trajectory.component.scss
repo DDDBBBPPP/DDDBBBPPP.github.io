@@ -1,0 +1,51 @@
+:host {
+  display: block;
+}
+
+.trajectory {
+  padding-block: clamp(1.5rem, 4vw, 3rem);
+}
+
+.trajectory-content {
+  max-width: var(--content-max-width);
+}
+
+h2 {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.9rem, 3.5vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.trajectory-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  margin-top: 1.5rem;
+}
+
+.trajectory-group {
+  min-width: 0;
+}
+
+h3 {
+  margin: 0 0 0.75rem;
+  color: var(--color-accent);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.cards {
+  display: grid;
+  gap: 0.75rem;
+}
+
+@media (max-width: 62rem) {
+  .trajectory-columns {
+    grid-template-columns: 1fr;
+    margin-top: 1.25rem;
+  }
+}

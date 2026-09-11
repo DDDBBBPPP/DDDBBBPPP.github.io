@@ -1,0 +1,25 @@
+<section id="trayectoria" class="trajectory" aria-labelledby="trajectory-title">
+  <div class="container trajectory-content">
+    <h2 id="trajectory-title">{{ 'trajectory.title' | translate }}</h2>
+
+    <div class="trajectory-columns">
+      <div class="trajectory-group">
+        <h3>{{ 'trajectory.experience.heading' | translate }}</h3>
+        <div class="cards">
+          @for (experience of experiences; track experience.id) {
+            <app-experience-card [experience]="experience" />
+          }
+        </div>
+      </div>
+
+      <div class="trajectory-group">
+        <h3>{{ 'trajectory.education.heading' | translate }}</h3>
+        <div class="cards">
+          @for (item of education; track item.id) {
+            <app-education-card [education]="item" />
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
