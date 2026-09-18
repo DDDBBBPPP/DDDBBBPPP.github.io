@@ -1,0 +1,174 @@
+<section id="proyectos" class="projects" aria-labelledby="projects-title">
+  <div class="container projects-content">
+    <div class="section-heading">
+      <h2 id="projects-title">{{ 'projects.title' | translate }}</h2>
+      <p>{{ 'projects.introduction' | translate }}</p>
+    </div>
+
+    <div class="project-grid">
+      @for (project of projects; track project.id) {
+        <article class="project-card" [class]="'project-card project-' + project.id">
+          <div class="project-body">
+            <div class="project-heading">
+              <h3>{{ project.title }}</h3>
+              @if (project.statusKey) {
+                <span class="status">{{ project.statusKey | translate }}</span>
+              }
+            </div>
+            <p class="description">{{ project.descriptionKey | translate }}</p>
+          </div>
+
+          <div class="gallery" [attr.aria-label]="project.title">
+            <div class="gallery-main">
+              <button
+                class="gallery-image-button"
+                type="button"
+                [attr.aria-label]="'projects.openImage' | translate"
+                (click)="openImage(project)"
+              >
+                <img
+                  class="project-image"
+                  [src]="project.images[selectedImageIndex(project.id)]"
+                  [alt]="
+                    'projects.imageAlt'
+                      | translate
+                        : { title: project.title, number: selectedImageIndex(project.id) + 1 }
+                  "
+                />
+              </button>
+
+              @if (project.images.length > 1 && project.id !== 'gkonect') {
+                <button
+                  class="gallery-control previous"
+                  type="button"
+                  [attr.aria-label]="'projects.previousImage' | translate"
+                  (click)="showPreviousImage(project.id, project.images.length)"
+                >
+                  <span aria-hidden="true">&#8592;</span>
+                </button>
+                <button
+                  class="gallery-control next"
+                  type="button"
+                  [attr.aria-label]="'projects.nextImage' | translate"
+                  (click)="showNextImage(project.id, project.images.length)"
+                >
+                  <span aria-hidden="true">&#8594;</span>
+                </button>
+              }
+            </div>
+
+            @if (project.images.length > 1 && project.id !== 'gkonect') {
+              <div
+                class="gallery-thumbnails"
+                role="tablist"
+                [attr.aria-label]="'projects.selectImage' | translate"
+              >
+                @for (image of project.images; track image; let imageIndex = $index) {
+                  <button
+                    class="thumbnail"
+                    type="button"
+                    role="tab"
+                    [attr.aria-label]="
+                      'projects.imageAlt'
+                        | translate: { title: project.title, number: imageIndex + 1 }
+                    "
+                    [attr.aria-selected]="selectedImageIndex(project.id) === imageIndex"
+                    [class.active]="selectedImageIndex(project.id) === imageIndex"
+                    (click)="selectImage(project.id, imageIndex)"
+                  >
+                    <img [src]="image" alt="" />
+                  </button>
+                }
+              </div>
+            }
+          </div>
+
+          <div class="project-body project-details">
+            <ul class="technologies" [attr.aria-label]="'projects.technologies' | translate">
+              @for (technology of project.technologies; track technology) {
+                <li>{{ technology }}</li>
+              }
+            </ul>
+
+            <div class="project-actions">
+              @if (project.demoUrl) {
+                <a
+                  class="action primary"
+                  [href]="project.demoUrl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {{ 'projects.demo' | translate }}
+                </a>
+              }
+              @if (project.githubUrl) {
+                <a
+                  class="action"
+                  [href]="project.githubUrl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {{ 'projects.github' | translate }}
+                </a>
+              }
+            </div>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+@if (modalProject(); as project) {
+  <dialog
+    #imageDialog
+    class="image-dialog"
+    aria-labelledby="image-dialog-title"
+    (click)="closeOnBackdrop($event)"
+    (keydown)="handleDialogKeydown($event)"
+    (close)="restoreFocus()"
+  >
+    <div class="image-dialog-panel">
+      <div class="image-dialog-heading">
+        <h2 id="image-dialog-title">{{ project.title }}</h2>
+        <button
+          class="dialog-close"
+          type="button"
+          autofocus
+          [attr.aria-label]="'projects.closeImage' | translate"
+          (click)="closeImage()"
+        >
+          <span aria-hidden="true">&#215;</span>
+        </button>
+      </div>
+
+      <div class="dialog-image-wrap">
+        <img
+          class="dialog-image"
+          [src]="project.images[modalImageIndex()]"
+          [alt]="
+            'projects.imageAlt' | translate: { title: project.title, number: modalImageIndex() + 1 }
+          "
+        />
+        @if (project.images.length > 1 && project.id !== 'gkonect') {
+          <button
+            class="gallery-control previous"
+            type="button"
+            [attr.aria-label]="'projects.previousImage' | translate"
+            (click)="showPreviousModalImage()"
+          >
+            <span aria-hidden="true">&#8592;</span>
+          </button>
+          <button
+            class="gallery-control next"
+            type="button"
+            [attr.aria-label]="'projects.nextImage' | translate"
+            (click)="showNextModalImage()"
+          >
+            <span aria-hidden="true">&#8594;</span>
+          </button>
+        }
+      </div>
+    </div>
+  </dialog>
+}

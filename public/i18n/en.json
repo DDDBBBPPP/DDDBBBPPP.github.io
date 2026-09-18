@@ -28,11 +28,54 @@
     },
     "education": {
       "heading": "Education",
+      "aiBigData": {
+        "title": "Specialization Course in Artificial Intelligence and Big Data",
+        "period": "September 2026 – Present",
+        "description": "Specialized training in artificial intelligence, machine learning, and large-scale data processing."
+      },
       "daw": {
         "title": "Web Application Development - Higher Vocational Training",
         "period": "September 2024 - June 2026",
         "description": "Vocational training focused on developing, maintaining and deploying web applications."
       }
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "introduction": "A selection of projects where I have applied different technologies to create useful web solutions.",
+    "items": {
+      "chatApp": {
+        "description": "A messaging application built to manage conversations and chats through a mobile interface."
+      },
+      "gifsApp": {
+        "description": "An application for searching and exploring GIFs using the Giphy API."
+      },
+      "hotel": {
+        "description": "A web application for managing rooms and bookings in a hotel business."
+      },
+      "gkonect": {
+        "description": "A web platform for connecting and managing services through an experience adapted to desktop and mobile."
+      }
+    },
+    "demo": "View demo",
+    "github": "GitHub",
+    "inDevelopment": "In development",
+    "technologies": "Technologies used",
+    "imageAlt": "Screenshot of {{title}}, image {{number}}",
+    "openImage": "Open enlarged screenshot",
+    "closeImage": "Close enlarged screenshot",
+    "previousImage": "View previous screenshot",
+    "nextImage": "View next screenshot",
+    "selectImage": "Select screenshot"
+  },
+  "stack": {
+    "title": "Stack",
+    "introduction": "Technologies and tools that are part of my journey in web development.",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Databases",
+      "toolsInfrastructure": "Tools, infrastructure and deployment"
     }
   },
   "header": {

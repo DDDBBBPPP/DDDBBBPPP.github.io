@@ -22,6 +22,14 @@ export const experiences: Experience[] = [
 
 export const education: Education[] = [
   {
+    id: 'cpifp-alan-turing-ia-big-data',
+    institution: 'CPIFP Alan Turing',
+    location: 'Ada Lovelace, Campus Málaga',
+    titleKey: 'trajectory.education.aiBigData.title',
+    periodKey: 'trajectory.education.aiBigData.period',
+    descriptionKey: 'trajectory.education.aiBigData.description',
+  },
+  {
     id: 'cpifp-alan-turing',
     institution: 'CPIFP Alan Turing',
     location: 'Campanillas / Málaga',

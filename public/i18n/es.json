@@ -28,11 +28,54 @@
     },
     "education": {
       "heading": "Formación",
+      "aiBigData": {
+        "title": "Curso de Especialización en Inteligencia Artificial y Big Data",
+        "period": "Septiembre 2026 – actualidad",
+        "description": "Formación especializada en inteligencia artificial, aprendizaje automático y procesamiento de grandes volúmenes de datos."
+      },
       "daw": {
         "title": "Desarrollo de Aplicaciones Web - Grado Superior",
         "period": "Septiembre 2024 - junio 2026",
         "description": "Formación profesional orientada al desarrollo, mantenimiento y despliegue de aplicaciones web."
       }
+    }
+  },
+  "projects": {
+    "title": "Proyectos",
+    "introduction": "Una selección de proyectos en los que he aplicado distintas tecnologías para crear soluciones web útiles.",
+    "items": {
+      "chatApp": {
+        "description": "Aplicación de mensajería desarrollada para gestionar conversaciones y chats desde una interfaz móvil."
+      },
+      "gifsApp": {
+        "description": "Aplicación para buscar y explorar GIFs utilizando la API de Giphy."
+      },
+      "hotel": {
+        "description": "Aplicación web para gestionar habitaciones y reservas de un establecimiento hotelero."
+      },
+      "gkonect": {
+        "description": "Plataforma web para conectar y gestionar servicios desde una experiencia adaptada a escritorio y móvil."
+      }
+    },
+    "demo": "Ver demo",
+    "github": "GitHub",
+    "inDevelopment": "En desarrollo",
+    "technologies": "Tecnologías utilizadas",
+    "imageAlt": "Captura de pantalla de {{title}}, imagen {{number}}",
+    "openImage": "Ampliar captura",
+    "closeImage": "Cerrar captura ampliada",
+    "previousImage": "Ver captura anterior",
+    "nextImage": "Ver captura siguiente",
+    "selectImage": "Seleccionar captura"
+  },
+  "stack": {
+    "title": "Stack",
+    "introduction": "Tecnologías y herramientas que forman parte de mi recorrido en desarrollo web.",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Bases de datos",
+      "toolsInfrastructure": "Herramientas, infraestructura y despliegue"
     }
   },
   "header": {

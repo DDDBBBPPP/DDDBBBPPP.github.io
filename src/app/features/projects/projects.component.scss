@@ -1,0 +1,322 @@
+:host {
+  display: block;
+}
+
+.projects {
+  padding-block: clamp(1.5rem, 4vw, 3rem);
+}
+
+.projects-content {
+  max-width: var(--content-max-width);
+}
+
+.section-heading {
+  max-width: 42rem;
+}
+
+h2 {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.9rem, 3.5vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.section-heading p {
+  margin: 0.75rem 0 0;
+  color: var(--color-text-muted);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 3vw, 1.75rem);
+  margin-top: 1.5rem;
+}
+
+.project-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background: var(--color-surface);
+  box-shadow: 0 0.5rem 1.5rem rgb(53 40 32 / 6%);
+}
+
+.project-body {
+  padding: 1.1rem 1.15rem 0;
+}
+
+.gallery {
+  padding: 0.75rem;
+  background: transparent;
+}
+
+.gallery-main {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  border: 1px solid var(--color-border);
+  border-radius: 0.45rem;
+  background: transparent;
+}
+
+.gallery-image-button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.project-chat-app .gallery-main {
+  width: min(100%, 18rem);
+  aspect-ratio: 9 / 16;
+  margin-inline: auto;
+}
+
+.project-gkonect .gallery-main {
+  aspect-ratio: 16 / 9;
+}
+
+.gallery-control {
+  position: absolute;
+  top: 50%;
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  place-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--color-surface) 92%, transparent);
+  color: var(--color-text);
+  cursor: pointer;
+  transform: translateY(-50%);
+
+  &:hover {
+    background: var(--color-surface);
+  }
+}
+
+.previous {
+  left: 0.65rem;
+}
+
+.next {
+  right: 0.65rem;
+}
+
+.gallery-thumbnails {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.65rem;
+  overflow-x: auto;
+  padding-bottom: 0.1rem;
+}
+
+.thumbnail {
+  flex: 0 0 4.25rem;
+  height: 2.75rem;
+  padding: 0;
+  overflow: hidden;
+  border: 2px solid transparent;
+  border-radius: 0.3rem;
+  background: transparent;
+  cursor: pointer;
+
+  &.active {
+    border-color: var(--color-accent);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.project-details {
+  padding: 0 1.15rem 1.25rem;
+}
+
+.project-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
+.status {
+  flex-shrink: 0;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--color-accent);
+  border-radius: 999px;
+  color: var(--color-accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.description {
+  margin: 0.7rem 0 0;
+  color: var(--color-text-muted);
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.25rem;
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+  }
+}
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 1.1rem;
+}
+
+.action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.35rem;
+  padding: 0.5rem 0.85rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.45rem;
+  color: var(--color-text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover {
+    background: var(--color-surface-alt);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+}
+
+.action.primary {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  color: var(--color-background);
+}
+
+.image-dialog {
+  width: min(94vw, 72rem);
+  max-width: none;
+  max-height: 94vh;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  background: var(--color-surface);
+  color: var(--color-text);
+
+  &::backdrop {
+    background: rgb(0 0 0 / 72%);
+  }
+}
+
+.image-dialog-panel {
+  padding: 0.8rem;
+}
+
+.image-dialog-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 0.25rem 0.75rem;
+
+  h2 {
+    margin: 0;
+    font-size: 1.15rem;
+  }
+}
+
+.dialog-close {
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  place-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--color-text);
+  cursor: pointer;
+
+  &:hover {
+    background: var(--color-surface-alt);
+  }
+}
+
+.dialog-image-wrap {
+  position: relative;
+  display: grid;
+  min-height: 12rem;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 0.45rem;
+  background: var(--color-background);
+}
+
+.dialog-image {
+  display: block;
+  width: 100%;
+  max-height: calc(94vh - 6rem);
+  object-fit: contain;
+}
+
+@media (max-width: 48rem) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 35rem) {
+  .project-chat-app .gallery-main {
+    width: min(100%, 15rem);
+  }
+
+  .project-heading {
+    display: block;
+  }
+
+  .status {
+    display: inline-block;
+    margin-top: 0.55rem;
+  }
+
+  .image-dialog {
+    width: calc(100vw - 1rem);
+  }
+
+  .image-dialog-panel {
+    padding: 0.5rem;
+  }
+}
